@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Student Guidance</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #141e30, #243b55);
+            color: white;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+        .container:hover {
+            transform: scale(1.05);
+        }
+        .btn-custom {
+            background: linear-gradient(to right, #ff9800, #ff5722);
+            color: white;
+            font-size: 1.2em;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: 0.4s;
+            border: none;
+        }
+        .btn-custom:hover {
+            background: linear-gradient(to right, #e68900, #e64a19);
+            transform: scale(1.1);
+            box-shadow: 0px 0px 15px rgba(255, 152, 0, 0.7);
+        }
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container fade-in">
+        <h1>AI-Powered Predictive Model for Personalized Student Guidance</h1>
+        <p>Get AI-driven insights into your academic performance and receive tailored recommendations to improve.</p>
+        <a href="index5.html" class="btn btn-custom">Access Prediction Form</a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

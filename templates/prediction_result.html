@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+</head>
+<body>
+    <h1>Student Performance Prediction</h1>
+    <h3>Prediction: {{ prediction }}</h3>
+    <h4>Prediction Probability:</h4>
+    <ul>
+        {% for prob in prediction_probability %}
+            <li>{{ prob }}</li>
+        {% endfor %}
+    </ul>
+    <h4>Highest Probability: {{ max_prob }}</h4>
+
+    <a href="/">Back to Prediction Form</a>
+</body>
+</html>

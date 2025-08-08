@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+            max-width: 600px;
+        }
+        .form-label {
+            font-weight: bold;
+        }
+        .form-control {
+            margin-bottom: 15px;
+        }
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header text-center">
+                <h2>Student Performance Prediction</h2>
+            </div>
+            <div class="card-body">
+                <form action="http://127.0.0.1:5000/predict" method="POST">
+                    <div class="mb-3">
+                        <label for="hours_studied" class="form-label">Hours Studied</label>
+                        <input type="number" id="hours_studied" name="Hours Studied" class="form-control" step="0.01" placeholder="Enter hours studied" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="previous_scores_scaled" class="form-label">Previous Scores (Scaled)</label>
+                        <input type="number" id="previous_scores_scaled" name="Previous Scores_scaled" class="form-control" step="0.01" placeholder="Enter scaled previous scores" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="extracurricular_activities" class="form-label">Extracurricular Activities</label>
+                        <input type="number" id="extracurricular_activities" name="Extracurricular Activities" class="form-control" placeholder="Enter extracurricular activities count" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="sleep_hours" class="form-label">Sleep Hours</label>
+                        <input type="number" id="sleep_hours" name="Sleep Hours" class="form-control" step="0.01" placeholder="Enter average sleep hours" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="sample_question_papers" class="form-label">Sample Question Papers Practiced</label>
+                        <input type="number" id="sample_question_papers" name="Sample Question Papers Practiced" class="form-control" placeholder="Enter number of question papers practiced" required>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-custom btn-lg">Predict</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

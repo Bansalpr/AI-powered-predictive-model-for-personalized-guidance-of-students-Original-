@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Prediction</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Student Performance Prediction</h2>
+        <form id="predict-form">
+            <div class="mb-3">
+                <label for="hours_studied" class="form-label">Hours Studied</label>
+                <input type="number" id="hours_studied" name="Hours Studied" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="previous_scores" class="form-label">Previous Scores (scaled)</label>
+                <input type="number" id="previous_scores" name="Previous Scores_scaled" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="extracurricular_activities" class="form-label">Extracurricular Activities</label>
+                <input type="number" id="extracurricular_activities" name="Extracurricular Activities" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="sleep_hours" class="form-label">Sleep Hours</label>
+                <input type="number" id="sleep_hours" name="Sleep Hours" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="question_papers" class="form-label">Sample Question Papers Practiced</label>
+                <input type="number" id="question_papers" name="Sample Question Papers Practiced" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+
+        <!-- Loading spinner -->
+        <div id="loading" style="display:none;">
+            <img src="https://loading.io/spinners/rolling/lg.rotating-circles-spinner.gif" alt="Loading...">
+        </div>
+
+        <!-- Prediction result -->
+        <div id="prediction-result"></div>
+    </div>
+
+    <script src="static/js/predict.js"></script>
+</body>
+</html>

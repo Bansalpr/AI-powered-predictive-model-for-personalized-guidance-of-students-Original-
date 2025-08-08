@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Prediction</title>
+</head>
+<body>
+    <h1>Student Performance Prediction</h1>
+    <form action="/predict" method="POST">
+        <label for="hours_studied">Hours Studied:</label><br>
+        <input type="number" id="hours_studied" name="Hours Studied" step="0.01" required><br><br>
+
+        <label for="previous_scores_scaled">Previous Scores (Scaled):</label><br>
+        <input type="number" id="previous_scores_scaled" name="Previous Scores_scaled" step="0.01" required><br><br>
+
+        <label for="extracurricular_activities">Extracurricular Activities:</label><br>
+        <input type="number" id="extracurricular_activities" name="Extracurricular Activities" required><br><br>
+
+        <label for="sleep_hours">Sleep Hours:</label><br>
+        <input type="number" id="sleep_hours" name="Sleep Hours" step="0.01" required><br><br>
+
+        <label for="sample_question_papers">Sample Question Papers Practiced:</label><br>
+        <input type="number" id="sample_question_papers" name="Sample Question Papers Practiced" required><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
